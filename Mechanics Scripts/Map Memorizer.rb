@@ -76,7 +76,7 @@ alias :lune_memorize_initialize :initialize
     $game_map.events.values.select {|event| event.moveto(@memorize_pos[@map_id][event.id][0], @memorize_pos[@map_id][event.id][1])}
   end
   def clear_event_positions(map_id)
-    @memorize_pos[map_id] == nil
+    @memorize_pos[map_id] = nil
   end
 end
 
@@ -101,7 +101,7 @@ alias lune_perform_reserve reserve_transfer
   # * Salvando as posições
   #--------------------------------------------------------------------------
   def reserve_transfer(map_id, x, y, d = 2)
-    lune_perform_reserve(map_id, x, y, d = 2)
+    lune_perform_reserve(map_id, x, y, d)
     $game_map.save_event_positions unless $game_switches[Lune_event_pos::Switch]
   end
 end
