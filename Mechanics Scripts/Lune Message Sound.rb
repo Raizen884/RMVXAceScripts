@@ -20,7 +20,7 @@ end
 #=======================================================
 class Window_Message < Window_Base
 alias :raizen_sound_message :wait_for_one_character
-alias :raizen_initialize_sound initialize
+alias :raizen_initialize_sound :initialize
   def initialize
     raizen_initialize_sound
     @charcount = 0
