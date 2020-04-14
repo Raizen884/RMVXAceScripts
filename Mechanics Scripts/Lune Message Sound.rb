@@ -7,14 +7,14 @@
 #=======================================================
 #=======================================================
 module Raizen_Message
-# Volume do Som
-Volume = 80
-# Arquivo que será tocado na pasta SE
-Sound = "Key"
-# Frequencia que será tocado o som (0 equivale a cada tecla digitada)
-Freq = 4
-# Switch que ativa e desativa o efeito.
-Switch = 1
+  # Volume do Som
+  Volume = 80
+  # Arquivo que será tocado na pasta SE
+  Sound = "Key"
+  # Frequencia que será tocado o som (0 equivale a cada tecla digitada)
+  Freq = 4
+  # Switch que ativa e desativa o efeito.
+  Switch = 1
 end
 # Aqui começa o script
 #=======================================================
