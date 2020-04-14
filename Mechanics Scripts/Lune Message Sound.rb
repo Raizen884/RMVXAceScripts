@@ -28,12 +28,12 @@ alias :raizen_initialize_sound initialize
   def wait_for_one_character
     raizen_sound_message
     if $game_switches[Raizen_Message::Switch]
-    if @charcount == Raizen_Message::Freq
-    RPG::SE.new(Raizen_Message::Sound, @volume = Raizen_Message::Volume).play
-    @charcount = 0
-    else
-    @charcount += 1
-    end
+      if @charcount == Raizen_Message::Freq
+        RPG::SE.new(Raizen_Message::Sound, @volume = Raizen_Message::Volume).play
+        @charcount = 0
+      else
+        @charcount += 1
+      end
     end
   end
 end
