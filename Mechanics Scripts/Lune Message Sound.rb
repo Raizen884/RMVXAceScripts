@@ -19,16 +19,16 @@ end
 # Aqui começa o script
 #=======================================================
 class Window_Message < Window_Base
-alias :raizen_sound_message :wait_for_one_character
 alias :raizen_initialize_sound :initialize
+alias :raizen_process_normal_character :process_normal_character
   def initialize
     raizen_initialize_sound
     @charcount = 0
   end
-  def wait_for_one_character
-    raizen_sound_message
+  def process_normal_character(c, pos)
+    raizen_process_normal_character(c, pos)
     if $game_switches[Raizen_Message::Switch]
-      if @charcount == Raizen_Message::Freq
+      if @charcount == Raizen_Message::Freq and c != ' '
         RPG::SE.new(Raizen_Message::Sound, @volume = Raizen_Message::Volume).play
         @charcount = 0
       else
